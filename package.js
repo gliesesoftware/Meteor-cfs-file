@@ -1,8 +1,8 @@
 Package.describe({
-  git: 'https://github.com/CollectionFS/Meteor-cfs-file.git',
-  name: 'cfs:file',
-  version: '0.1.15',
-  summary: 'CollectionFS, FS.File object'
+  git: 'https://github.com/gliesesoftware/cfs-file.git',
+  name: 'gliese:cfs-file',
+  version: '0.1.16',
+  summary: 'Gliese flavour of the CollectionFS FS.File object (INTERNAL USE ONLY)'
 });
 
 Npm.depends({
@@ -14,12 +14,12 @@ Package.onUse(function(api) {
 
   // This imply is needed for tests, and is technically probably correct anyway.
   api.imply([
-    'cfs:base-package@0.0.27'
+    'gliese:cfs-base@0.0.28'
   ]);
 
   api.use([
-    'cfs:base-package@0.0.27',
-    'cfs:storage-adapter@0.1.1',
+    'gliese:cfs-base@0.0.28',
+    'gliese:cfs-storage@0.1.2',
     'tracker',
     'check',
     'ddp',
@@ -41,8 +41,8 @@ Package.onUse(function(api) {
 
 Package.onTest(function (api) {
   api.use([
-    'cfs:standard-packages@0.0.0',
-    'cfs:gridfs@0.0.0',
+    'gliese:cfs-core@0.0.0',
+    'gliese:cfs-gridfs@0.0.0',
     'tinytest@1.0.0',
     'http@1.0.0',
     'test-helpers@1.0.0',
